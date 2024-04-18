@@ -1,0 +1,48 @@
+@prefix mat: <http://demo.openlinksw.com/semiconductor-demo#>.
+@prefix researcher: <http://demo.openlinksw.com/semiconductor-demo/researcher#>.
+@prefix : <http://demo.openlinksw.com/semiconductor-demo#properties/>.
+
+:Measurement001 a :Measurement;
+    :material mat:Gallium_Arsenide ;
+    :property :Electron_Mobility ;
+    :value "8500 cm^2/Vs"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    :date "2023-04-15"^^xsd:date ;
+    schema:creator researcher:John ;
+    schema:description "Electron mobility measurement for GaAs at room temperature.".
+
+:Measurement002 a :Measurement;
+    :material mat:Silicon ;
+    :property :Band_Gap ;
+    :value "1.12 eV"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    :date "2023-04-16"^^xsd:date ;
+    schema:creator researcher:Jane ;
+    schema:description "Silicon band gap measurement at room temperature.".
+
+:Measurement003 a :Measurement;
+    :material mat:Silicon_Carbide ;
+    :property :Thermal_Conductivity ;
+    :value "490 W/mK"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    :date "2023-04-17"^^xsd:date ;
+    schema:creator researcher:John ;
+    schema:description "Thermal conductivity of SiC recorded at room temperature.".
+
+:Measurement004 a :Measurement;
+    :material mat:Gallium_Nitride ;
+    :property :Breakdown_Voltage ;
+    :value "0.8 MV/cm"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    :date "2023-04-18"^^xsd:date ;
+    schema:creator researcher:Jane ;
+    schema:description "GaN breakdown voltage results at room temperature.".
+
+:Measurement005 a :Measurement;
+    :material mat:Indium_Phosphide ;
+    :property :Electron_Mobility ;
+    :value "4600 cm^2/Vs"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    :date "2023-04-19"^^xsd:date ;
+    schema:creator researcher:John ;
+    schema:description "Electron mobility in InP at room temperature.".
