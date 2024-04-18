@@ -1,0 +1,119 @@
+@prefix mat: <http://demo.openlinksw.com/semiconductor-demo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.openlinksw.com/ontology/semiconductor-demo#> .
+
+# Materials
+mat:Gallium_Arsenide a mat:Material ;
+    rdfs:label "Gallium Arsenide" ;
+    rdfs:comment "A compound of gallium and arsenic used in the manufacture of devices such as microwave frequency integrated circuits, infrared light-emitting diodes, laser diodes, solar cells and optical windows." ;
+    :compounds :Gallium, :Arsenic ;
+    :materialDescriptors :CompoundSemiconductor ;
+    :uses :MicrowaveCircuits, :InfraredLEDs, :LaserDiodes, :SolarCells, :OpticalWindows .
+
+mat:Silicon a mat:Material ;
+    rdfs:label "Silicon" ;
+    rdfs:comment "A hard and brittle crystalline solid with a blue-grey metallic lustre, and is a tetravalent metalloid and semiconductor. It is a member of group 14 in the periodic table." ;
+    :materialDescriptors :Crystalline, :Brittle ;
+    :uses :Microelectronics, :SolarCells .
+
+mat:Silicon_Carbide a mat:Material ;
+    rdfs:label "Silicon Carbide" ;
+    rdfs:comment "Known as carborundum, it is a semiconductor containing silicon and carbon. It occurs in nature as the extremely rare mineral moissanite." ;
+    :compounds :Silicon, :Carbon ;
+    :materialDescriptors :CompoundSemiconductor ;
+    :uses :PowerDevices, :LEDs .
+
+mat:Gallium_Nitride a mat:Material ;
+    rdfs:label "Gallium Nitride" ;
+    rdfs:comment "A semiconductor commonly used in light-emitting diodes (LEDs). It is a hard material that has a Wurtzite crystal structure." ;
+    :compounds :Gallium, :Nitrogen ;
+    :materialDescriptors :CompoundSemiconductor ;
+    :uses :LEDs, :HighFrequencyDevices .
+
+mat:Indium_Phosphide a mat:Material ;
+    rdfs:label "Indium Phosphide" ;
+    rdfs:comment "A binary semiconductor composed of indium and phosphorus. It has a high electron velocity and high thermal conductivity." ;
+    :compounds :Indium, :Phosphorus ;
+    :materialDescriptors :CompoundSemiconductor ;
+    :uses :Telecommunications, :FastElectronics .
+
+# Compounds
+:Gallium a mat:Compound ;
+    rdfs:label "Gallium" ;
+    rdfs:comment "A soft, silvery metal used primarily in electronic circuits, semiconductors, and light-emitting diodes.".
+
+:Arsenic a mat:Compound ;
+    rdfs:label "Arsenic" ;
+    rdfs:comment "A metalloid that forms many toxic compounds, notably in semiconductors like gallium arsenide for high-speed devices.".
+
+:Silicon a mat:Compound ;
+    rdfs:label "Silicon" ;
+    rdfs:comment "A chemical element with symbol Si and atomic number 14, used as a semiconductor in microelectronic devices and solar cells.".
+
+:Carbon a mat:Compound ;
+    rdfs:label "Carbon" ;
+    rdfs:comment "A fundamental component in steelmaking, carbon fibers, and as a semiconductor material in silicon carbide.".
+
+:Nitrogen a mat:Compound ;
+    rdfs:label "Nitrogen" ;
+    rdfs:comment "Commonly used in the production of nitride semiconductors like gallium nitride used in LED technology.".
+
+:Indium a mat:Compound ;
+    rdfs:label "Indium" ;
+    rdfs:comment "A soft, malleable metal used extensively in electronic components such as touchscreens and solar cells.".
+
+:Phosphorus a mat:Compound ;
+    rdfs:label "Phosphorus" ;
+    rdfs:comment "Used in the manufacture of phosphide semiconductors and certain high-performance alloys.".
+
+# Material Descriptors
+:CompoundSemiconductor a mat:MaterialDescriptor ;
+    rdfs:label "Compound Semiconductor" ;
+    rdfs:comment "Semiconductors made from two or more".
+
+
+# Uses Detailed
+mat:MicrowaveCircuits a mat:Use ;
+    rdfs:label "Microwave circuits" ;
+    rdfs:comment "Applications in microwave frequency integrated circuits, common in communication and radar systems, where materials like Gallium Arsenide are used for their superior high-frequency performance.".
+
+mat:InfraredLEDs a mat:Use ;
+    rdfs:label "Infrared LEDs" ;
+    rdfs:comment "Devices that emit infrared light, used in remote controls, security systems, and night vision equipment. Gallium Arsenide is often chosen for its effectiveness in these applications.".
+
+mat:LaserDiodes a mat:Use ;
+    rdfs:label "Laser diodes" ;
+    rdfs:comment "Critical components in optical communications and barcode scanning, utilizing materials such as Gallium Arsenide and Indium Phosphide for high efficiency and performance.".
+
+mat:SolarCells a mat:Use ;
+    rdfs:label "Solar cells" ;
+    rdfs:comment "Converts sunlight directly into electricity. Silicon is predominantly used due to its abundant availability and effective photovoltaic properties.".
+
+mat:OpticalWindows a mat:Use ;
+    rdfs:label "Optical windows" ;
+    rdfs:comment "Materials like Gallium Arsenide are used to create transparent windows that allow infrared and other wavelengths to pass through, essential for sensors and imaging devices.".
+
+mat:Microelectronics a mat:Use ;
+    rdfs:label "Microelectronics" ;
+    rdfs:comment "The use of Silicon in microelectronics for constructing integrated circuits and semiconductor devices, due to its stable properties and semiconductor nature.".
+
+mat:PowerDevices a mat:Use ;
+    rdfs:label "Power devices" ;
+    rdfs:comment "Utilizes Silicon Carbide for power electronic devices that require high endurance and efficiency, especially in high voltage and temperature environments.".
+
+mat:LEDs a mat:Use ;
+    rdfs:label "LEDs" ;
+    rdfs:comment "Light-emitting diodes make extensive use of Gallium Nitride for its direct bandgap, providing bright and efficient lighting across visible to ultraviolet spectra.".
+
+mat:HighFrequencyDevices a mat:Use ;
+    rdfs:label "High-frequency devices" ;
+    rdfs:comment "Involves Gallium Nitride due to its ability to operate at high temperatures and frequencies, ideal for RF and microwave applications.".
+
+mat:Telecommunications a mat:Use ;
+    rdfs:label "Telecommunications" ;
+    rdfs:comment "Uses Indium Phosphide in components for telecommunications infrastructure, providing high-speed and high-frequency data transmission capabilities.".
+
+mat:FastElectronics a mat:Use ;
+    rdfs:label "Fast electronics" ;
+    rdfs:comment "Indium Phosphide is used in high-speed electronic applications where rapid signal processing is critical, such as in high-speed networks and fast computing environments.".

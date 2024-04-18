@@ -1,0 +1,51 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.openlinksw.com/ontology/semiconductor-demo#> .
+@prefix mat: <http://demo.openlinksw.com/semiconductor-demo#> .
+@prefix researcher: <http://demo.openlinksw.com/semiconductor-demo/researcher#> .
+@prefix schema: <http://schema.org/> .
+
+:Measurement006 a :Measurement;
+    :material mat:Germanium ;
+    :property :Band_Gap ;
+    :value "0.66 eV"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    schema:dateCreated "2023-04-20"^^xsdschema:dateCreated ;
+    schema:creator researcher:Jane ;
+    schema:description "Internal data: Band gap measurement of Germanium, sensitive due to new manufacturing techniques." .
+
+:Measurement007 a :Measurement;
+    :material mat:Silicon ;
+    :property :Thermal_Conductivity ;
+    :value "148 W/mK"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    schema:dateCreated "2023-04-21"^^xsdschema:dateCreated ;
+    schema:creator researcher:John ;
+    schema:description "Internal data: Verification of thermal conductivity of Silicon for internal R&D purposes." .
+
+:Measurement008 a :Measurement;
+    :material mat:Gallium_Arsenide ;
+    :property :Band_Gap ;
+    :value "1.43 eV"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    schema:dateCreated "2023-04-22"^^xsdschema:dateCreated ;
+    schema:creator researcher:Jane ;
+    schema:description "Internal data: GaAs band gap results for confidential technological development." .
+
+:Measurement009 a :Measurement;
+    :material mat:Silicon_Carbide ;
+    :property :Electron_Mobility ;
+    :value "900 cm^2/Vs"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    schema:dateCreated "2023-04-23"^^xsdschema:dateCreated ;
+    schema:creator researcher:John ;
+    schema:description "Internal data: Electron mobility in SiC, confidential for competitive edge." .
+
+:Measurement010 a :Measurement;
+    :material mat:Gallium_Nitride ;
+    :property :Thermal_Conductivity ;
+    :value "130 W/mK"^^xsd:string ;
+    :temperature "300K"^^xsd:string ;
+    schema:dateCreated "2023-04-24"^^xsdschema:dateCreated ;
+    schema:creator researcher:Jane ;
+    schema:description "Internal data: Thermal conductivity of GaN, restricted to company labs due to patent process." .

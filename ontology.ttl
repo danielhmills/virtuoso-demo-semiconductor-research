@@ -1,0 +1,99 @@
+@prefix : <http://www.openlinksw.com/ontology/semiconductor-demo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Classes
+:Measurement a owl:Class ;
+    rdfs:label "Measurement" ;
+    rdfs:comment "A class representing the observations and measurements of semiconductor properties." .
+
+:Material a owl:Class ;
+    rdfs:label "Material" ;
+    rdfs:comment "A class representing different semiconductor materials." .
+
+:Researcher a owl:Class ;
+    rdfs:label "Researcher" ;
+    rdfs:comment "A class representing individuals who conduct measurements and research." .
+
+# Properties
+:material a owl:ObjectProperty ;
+    rdfs:label "material" ;
+    rdfs:comment "Relates a measurement to a material being studied." ;
+    rdfs:domain :Measurement ;
+    rdfs:range :Material .
+
+:property a owl:ObjectProperty ;
+    rdfs:label "property" ;
+    rdfs:comment "The specific property being measured, such as Electron Mobility, Band Gap, etc." ;
+    rdfs:domain :Measurement ;
+    rdfs:range rdfs:Resource .  # Could link to a specific class if detailed property descriptions are used
+
+:value a owl:DatatypeProperty ;
+    rdfs:label "value" ;
+    rdfs:comment "The value of the property being measured." ;
+    rdfs:domain :Measurement ;
+    rdfs:range xsd:string .
+
+:temperature a owl:DatatypeProperty ;
+    rdfs:label "temperature" ;
+    rdfs:comment "The temperature at which the measurement was taken." ;
+    rdfs:domain :Measurement ;
+    rdfs:range xsd:string .
+
+:date a owl:DatatypeProperty ;
+    rdfs:label "date" ;
+    rdfs:comment "The date on which the measurement was taken." ;
+    rdfs:domain :Measurement ;
+    rdfs:range xsd:date .
+
+# Individual material properties defined as subclasses of rdfs:Resource or a new class :Property could be used
+:Electron_Mobility a owl:Class ;
+    rdfs:label "Electron Mobility" ;
+    rdfs:comment "The ability of charged particles, such as electrons, to move through a semiconductor." .
+
+:Band_Gap a owl:Class ;
+    rdfs:label "Band Gap" ;
+    rdfs:comment "The energy difference between the top of the valence band and the bottom of the conduction band in semiconductors." .
+
+:Thermal_Conductivity a owl:Class ;
+    rdfs:label "Thermal Conductivity" ;
+    rdfs:comment "The property of a material to conduct heat." .
+
+:Breakdown_Voltage a owl:Class ;
+    rdfs:label "Breakdown Voltage" ;
+    rdfs:comment "The minimum (reverse) voltage that can make the diode conduct in reverse." .
+
+# Compounds
+:Gallium a mat:Compound ;
+    rdfs:label "Gallium" ;
+    rdfs:comment "A soft, silvery metal used primarily in electronic circuits, semiconductors, and light-emitting diodes.".
+
+:Arsenic a mat:Compound ;
+    rdfs:label "Arsenic" ;
+    rdfs:comment "A metalloid that forms many toxic compounds, notably in semiconductors like gallium arsenide for high-speed devices.".
+
+:Silicon a mat:Compound ;
+    rdfs:label "Silicon" ;
+    rdfs:comment "A chemical element with symbol Si and atomic number 14, used as a semiconductor in microelectronic devices and solar cells.".
+
+:Carbon a mat:Compound ;
+    rdfs:label "Carbon" ;
+    rdfs:comment "A fundamental component in steelmaking, carbon fibers, and as a semiconductor material in silicon carbide.".
+
+:Nitrogen a mat:Compound ;
+    rdfs:label "Nitrogen" ;
+    rdfs:comment "Commonly used in the production of nitride semiconductors like gallium nitride used in LED technology.".
+
+:Indium a mat:Compound ;
+    rdfs:label "Indium" ;
+    rdfs:comment "A soft, malleable metal used extensively in electronic components such as touchscreens and solar cells.".
+
+:Phosphorus a mat:Compound ;
+    rdfs:label "Phosphorus" ;
+    rdfs:comment "Used in the manufacture of phosphide semiconductors and certain high-performance alloys.".
+
+# Material Descriptors
+:CompoundSemiconductor a mat:MaterialDescriptor ;
+    rdfs:label "Compound Semiconductor" ;
+    rdfs:comment "Semiconductors made from two or more".
